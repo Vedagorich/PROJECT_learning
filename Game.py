@@ -4,6 +4,8 @@ wins_cord = [(1, 2, 3), (4, 5, 6), (7, 8, 9), (1, 4, 7), (2, 5, 8), (3, 6, 9), (
 
 
 def table_game():
+    "делаем стол для игры"
+
     print("-------------")
     for i in range(3):
         print("|", table[0 + i * 3], "|", table[1 + i * 3], "|", table[2 + i * 3], "|")
@@ -11,6 +13,7 @@ def table_game():
 
 
 def point_input(player_point):
+    "Выбираем клетку + проверка на ввод числа"
     while True:
         value = input("Выберите поле для: " + player_point + "?")
         if not (value in "123456789"):
@@ -25,6 +28,8 @@ def point_input(player_point):
 
 
 def game_win():
+    "проверка выигрышной комбинации"
+
     for each in wins_cord:
         if (table[each[0] - 1]) == (table[each[1] - 1]) == (table[each[2] - 1]):
             return table[each[1]]
@@ -33,6 +38,7 @@ def game_win():
 
 
 def main():
+    "алгоритм игры"
     counter = 0
     while True:
         table_game()
