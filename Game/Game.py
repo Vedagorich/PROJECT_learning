@@ -38,7 +38,7 @@ def game_win():
 
 
 def main():
-    "алгоритм игры"
+    " алгоритм игры "
     counter = 0
     while True:
         table_game()
